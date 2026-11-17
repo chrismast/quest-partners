@@ -10,7 +10,17 @@ RUNTIME=FILES[:7]
 
 def sha(data): return hashlib.sha256(data).hexdigest()
 
-def build(source,output=None):
+def choose_channel(version,channel=None):
+    if channel is None:
+        channel=('beta' if re.search(r'-beta(?:[.\-]|$)',version,re.I) else 'alpha') if '-' in version else 'release'
+    if channel not in ('alpha','beta','release'):
+        raise ValueError('Unknown release channel')
+    if channel=='release' and '-' in version:
+        raise ValueError('Release requires a version without a prerelease suffix')
+    return channel
+
+
+def build(source,output=None,channel=None):
     source=source.resolve()
     missing=[name for name in FILES if not (source/name).is_file()]
     if missing: raise ValueError('Missing required files: '+', '.join(missing))
@@ -25,7 +35,9 @@ def build(source,output=None):
     if not core_version or core_version.group(1)!=version: raise ValueError('Core and TOC versions differ')
     load_order=[line.strip() for line in toc.splitlines() if line.strip() and not line.startswith('#')]
     if load_order!=list(FILES[:5]): raise ValueError('Unexpected TOC load order')
-    output=(output or ROOT/'upload'/f'QuestPartners-{version}-forever-alpha.zip').resolve()
+    channel=choose_channel(version,channel)
+    suffix='' if channel=='release' else '-'+channel
+    output=(output or ROOT/'upload'/f'QuestPartners-{version}-forever{suffix}.zip').resolve()
     output.parent.mkdir(parents=True,exist_ok=True)
     with ZipFile(output,'w',ZIP_DEFLATED,compresslevel=9) as z:
         for name in FILES:
@@ -39,7 +51,7 @@ def build(source,output=None):
         assert all('..' not in name.split('/') for name in z.namelist())
         for name in FILES: assert z.read('QuestPartners/'+name)==(source/name).read_bytes()
     record={'version':version,'interface':16001,'planned_flavour':'Forever',
-            'planned_file_type':'Alpha','submitted_to_curseforge':False,
+            'planned_file_type':channel.title(),'curseforge_project_id':1811599,'submitted_to_curseforge':False,
             'filename':output.name,'bytes':output.stat().st_size,'sha256':sha(output.read_bytes()),
             'entry_count':len(FILES),'root':'QuestPartners/',
             'source_sha256':{name:sha((source/name).read_bytes()) for name in FILES},
@@ -52,5 +64,6 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source',type=Path,default=ROOT/'QuestPartners')
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--channel',choices=('alpha','beta','release'),default=None)
     args=parser.parse_args()
-    build(args.source,args.output)
+    build(args.source,args.output,args.channel)
