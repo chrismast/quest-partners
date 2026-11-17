@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+upload/
+BUILD_VALIDATION.json
+*.zip
+.DS_Store
+Thumbs.db
+WTF/
+SavedVariables/
