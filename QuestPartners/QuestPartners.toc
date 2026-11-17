@@ -1,0 +1,12 @@
+## Interface: 16001
+## Title: Quest Partners
+## Notes: Compact, transparent party quest comparisons for WoW Forever.
+## Author: Christian Reiners
+## Version: 0.6.0-test9
+## IconTexture: Interface\AddOns\QuestPartners\Media\Logo
+## SavedVariablesPerCharacter: QuestPartnersDB
+Core.lua
+UI.lua
+Settings.lua
+Features.lua
+Main.lua

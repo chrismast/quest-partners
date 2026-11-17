@@ -1,0 +1,19 @@
+# 0.6.0-test9 — first public Alpha candidate
+
+This file packages the current Test9 code for a first public Alpha. It adds no
+runtime changes over the private Test9 build.
+
+- Quest difficulty badges, title/objective search and a persistent Working on shortlist.
+- Party quest and objective comparisons for up to five players on WoW Forever.
+- All/Shared filters, region groups, collapsed summaries and individual bars.
+- Adjustable appearance, stable sorting, behind-player highlights and pins.
+- Local objective-completion bubbles and optional everyone-ready notifications.
+- Reusable visible rows, changed-only work and paced party communication.
+- Bounded message handling and safer shared UI/command behaviour.
+
+Targets Forever 1.60.1 / interface 16001. Participating players need the addon;
+using the same version is recommended. Sound is off by default.
+
+117 automated tests passed for Test9. Automated evidence does not establish
+every live client/addon combination. Please report reproducible Alpha issues
+with the client build, addon version and sync diagnostics.
