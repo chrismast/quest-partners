@@ -1,0 +1,23 @@
+{
+  "version": "0.6.0-test9",
+  "channel": "alpha",
+  "github_repository": "chrismast/quest-partners",
+  "source_commit_observed": "f4773fe10aceeee3f60eb4625dc24057ec119d3c",
+  "release_tag": null,
+  "github_release_url": null,
+  "candidate_filename": "QuestPartners-0.6.0-test9-forever-alpha.zip",
+  "candidate_bytes": 63985,
+  "candidate_sha256": "f5b90eed5bef57a6c799fe6750f7d3288b37dcde8c4c871058c52072f15b7492",
+  "curseforge_project_id": 1811599,
+  "curseforge_project_url": "https://www.curseforge.com/wow/addons/quest-partners",
+  "curseforge_file_id": null,
+  "curseforge_file_url": null,
+  "submission_state": "submitted_awaiting_moderation_author_report",
+  "submission_observed_on": "2026-11-17",
+  "public_download_verified": false,
+  "submitted_bytes_independently_verified": false,
+  "automated_tests_prepared_source": 117,
+  "live_download_smoke_passed": null,
+  "linkedin_ready": false,
+  "notes": "Candidate identity is known; actual submitted file ID, approved download and live signoff remain to be recorded. No tag or release was created by the release-process documentation."
+}

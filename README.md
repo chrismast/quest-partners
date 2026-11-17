@@ -12,7 +12,7 @@ Compact party quest comparisons for WoW Forever. Compare each player's objective
 - Adjustable opacity, colours, text size and bars; optional level-difficulty badges.
 - Per-player counts, behind-player highlights and optional local completion bubbles.
 
-See [the user guide](QuestPartners/README.txt) and [project overview](docs/PROJECT_PAGE.md). The current CurseForge project is [Quest Partners](https://www.curseforge.com/wow/addons/quest-partners), ID 1811599; its initial file is still being prepared and moderation is pending at the time of this source preparation.
+See [the user guide](QuestPartners/README.txt) and [project overview](docs/PROJECT_PAGE.md). The current CurseForge project is [Quest Partners](https://www.curseforge.com/wow/addons/quest-partners), ID 1811599; the initial Alpha file has been submitted and is awaiting moderation, according to the author’s 17 November 2026 update. A public download has not yet been independently verified.
 
 ## Install
 
@@ -32,7 +32,7 @@ python tools/build_release.py
 
 The current suite has 117 tests. Simulations cover sync, hostile inputs, resource bounds and shared-addon boundaries; they do not certify the actual game renderer or every addon combination. Test the built archive in the actual client before publishing.
 
-The standard-library builder uses an explicit allowlist and writes `upload/QuestPartners-0.6.0-test9-forever-alpha.zip`. It excludes tests and development documents. Automatic publishing is not configured.
+The standard-library builder uses an explicit allowlist and writes `upload/QuestPartners-0.6.0-test9-forever-alpha.zip`. It excludes tests and development documents. Automatic publishing is not configured. See [the update and release process](docs/RELEASING.md) and [release checklist](docs/RELEASE_CHECKLIST.md) for keeping GitHub and CurseForge aligned.
 
 ## Feedback and contributions
 
