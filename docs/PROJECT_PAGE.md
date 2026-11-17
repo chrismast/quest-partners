@@ -6,7 +6,7 @@ Who still needs one more drop? Which quests do we both have? What should we work
 
 Quest Partners brings your party's quest progress into one compact, adjustable tracker for **WoW Forever**. Compare objectives by player, focus on shared quests, and keep the quests you are working on within easy reach.
 
-**Early Alpha:** the current build is 0.6.0-test9, targeting Forever 1.60.1 / interface 16001. Every player whose progress you want to see needs Quest Partners installed. Using the same version is recommended.
+**First Release:** version 0.6.0 targets Forever 1.60.1 / interface 16001. Every player whose progress you want to see needs Quest Partners installed. Using the same version is recommended.
 
 ## See what everyone still needs
 
@@ -62,13 +62,13 @@ For manual installation, exit the game and extract the addon ZIP so that `Interf
 
 The shorter `/qp` command is available when another addon has not already claimed it.
 
-## Compatibility and Alpha feedback
+## Compatibility and feedback
 
 This build targets **WoW Forever 1.60.1 / interface 16001**. Other WoW clients and raids are not supported. No external account, backend or additional addon is required. Quest data is exchanged with the current party, and preferences are saved per character.
 
 Quest Partners does not exchange progress with other quest-sharing addons. It does not automatically accept, abandon or turn in quests. Explicit quest-sharing actions follow the client's normal restrictions.
 
-The build has passed 117 automated Lua 5.1 tests, including sync, long-list, hostile-input and shared-interface checks. Live testing is ongoing; this does not establish compatibility with every addon combination. Large initial exchanges or client message throttling can delay updates. Current sync limits are 100 quests per participant and 20 objectives per quest.
+The addon has passed 117 automated Lua 5.1 regressions, with 8 additional release-packaging checks, including sync, long-list, hostile-input and shared-interface checks. Further compatibility testing is welcome; this does not establish compatibility with every addon combination. Large initial exchanges or client message throttling can delay updates. Current sync limits are 100 quests per participant and 20 objectives per quest.
 
 If you encounter a problem, include the addon version, client build, party size, steps to reproduce and `/questpartners status` from the affected players. Remove unrelated chat and personal information from screenshots. Until a public issue tracker is linked, use the project's CurseForge comments.
 

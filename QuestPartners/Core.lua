@@ -1,7 +1,7 @@
 local _, NS = ...
 local C = {}
 NS.Core = C
-C.VERSION = "0.6.0-test9"
+C.VERSION = "0.6.0"
 C.RX_RATE,C.RX_BURST=16,64
 C.BACKUP_SCAN_INTERVAL=2
 C.MIN_SCAN_INTERVAL=0.25

@@ -2,7 +2,7 @@
 
 Compact party quest comparisons for WoW Forever. Compare each player's objectives, search by quest or objective, and star a small Working on shortlist.
 
-**Early Alpha: 0.6.0-test9.** Targets Forever 1.60.1 / interface 16001, for normal and instance parties of up to five players. All participating players need the addon; using the same version is recommended. Live testing is ongoing. Other WoW clients and raids are not supported.
+**Version 0.6.0.** Targets Forever 1.60.1 / interface 16001, for normal and instance parties of up to five players. All participating players need the addon; using the same version is recommended. Feedback and further compatibility testing are welcome. Other WoW clients and raids are not supported.
 
 ## Features
 
@@ -12,7 +12,7 @@ Compact party quest comparisons for WoW Forever. Compare each player's objective
 - Adjustable opacity, colours, text size and bars; optional level-difficulty badges.
 - Per-player counts, behind-player highlights and optional local completion bubbles.
 
-See [the user guide](QuestPartners/README.txt) and [project overview](docs/PROJECT_PAGE.md). The current CurseForge project is [Quest Partners](https://www.curseforge.com/wow/addons/quest-partners), ID 1811599; its initial file is still being prepared and moderation is pending at the time of this source preparation.
+See [the user guide](QuestPartners/README.txt) and [project overview](docs/PROJECT_PAGE.md). The current CurseForge project is [Quest Partners](https://www.curseforge.com/wow/addons/quest-partners), ID 1811599; consult its Files tab for the packages currently published. The previous Test9 Alpha remains available while 0.6.0 is prepared for publication.
 
 ## Install
 
@@ -30,9 +30,9 @@ python -m unittest discover -s tests -p "test_*.py" -q
 python tools/build_release.py
 ```
 
-The current suite has 117 tests. Simulations cover sync, hostile inputs, resource bounds and shared-addon boundaries; they do not certify the actual game renderer or every addon combination. Test the built archive in the actual client before publishing.
+The current suite has 117 addon regressions and 8 release-packaging checks. Simulations cover sync, hostile inputs, resource bounds and shared-addon boundaries; they do not certify the actual game renderer or every addon combination. Test the built archive in the actual client before publishing.
 
-The standard-library builder uses an explicit allowlist and writes `upload/QuestPartners-0.6.0-test9-forever-alpha.zip`. It excludes tests and development documents. Automatic publishing is not configured.
+The standard-library builder uses an explicit allowlist and writes `upload/QuestPartners-0.6.0-forever.zip`. It excludes tests and development documents. Automatic publishing is not configured. Stable versions default to Release packaging; use `--channel alpha` or `--channel beta` explicitly when needed. See [release instructions](docs/RELEASING.md).
 
 ## Feedback and contributions
 

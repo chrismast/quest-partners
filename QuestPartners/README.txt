@@ -1,4 +1,4 @@
-QUEST PARTNERS - 0.6.0-test9 / ALPHA CANDIDATE
+QUEST PARTNERS - 0.6.0 / RELEASE
 Compact party quest tracking for WoW Forever 1.60.1 (interface 16001).
 
 INSTALL
@@ -30,12 +30,12 @@ COMMANDS
 /questpartners reset        Reset position/size
 /questpartners demo         Clearly labelled fictional progress
 
-ALPHA LIMITATIONS
+COMPATIBILITY AND LIMITATIONS
 Every player whose progress you want to compare needs Quest Partners; use the
 same version where possible. Other WoW clients, raids and other addons' sharing
 protocols are not supported. Large logs can reach the bounded sync payload.
 Unknown/offline/stale values are labelled. Exact client/addon combinations may
-still expose issues during Alpha. Bubbles are local screen overlays, not chat
+still expose issues; please report reproducible problems. Bubbles are local screen overlays, not chat
 messages or world-space speech bubbles. The addon never auto-accepts, abandons
 or turns in quests. Native sharing is an explicit click and may be unavailable.
 
